@@ -18,6 +18,6 @@ Through terminal or command prompt, install project dependencies, migrations and
 
 `npm install`
 
-`php compser dumpt-autoload`
+`composer dump-autoload`
 
 `php artisan migrate:fresh --seed`
