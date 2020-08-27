@@ -36,7 +36,7 @@ class CarService extends BaseService implements CarInterface {
                 ['type' => 'model', 'name' => $request->model_id]
             );
 
-            $request['photo'] = $this->processFileUpload($request->photo, Config::get('constants.upload_location'));
+            $request['photo'] = $this->processFileUpload($request->photo, Config::get('constants.uploads_location'));
 
             $request['make_id'] = $carMake->id;
             $request['model_id'] = $carModel->id;

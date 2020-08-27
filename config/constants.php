@@ -2,6 +2,6 @@
 
 return [
 
-    'uploads_location' => 'img/uploads/'
+    'uploads_location' => 'uploads/'
 
 ];

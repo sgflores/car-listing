@@ -12,21 +12,25 @@
                         <div class="form-group">
                             <label for="make_id">Make <required-label></required-label> </label>
                             <br>
-                            <auto-complete id="make_id" name="make_id" placeholder="Enter Make"
-                                :className="$v.car.make_id.$error ? 'is-invalid' : ''" 
+                            <input-auto-complete 
+                                :className="'form-control '+($v.car.make_id.$error ? 'is-invalid' : '')"
                                 :value="$v.car.make_id.$model"
-                                :updateValueHandler="(val) => { car.make_id = val; }"
-                                :options="makeOptions"></auto-complete>
+                                id="make_id"  name="make_id"
+                                placeholder="Enter Make..."
+                                :options="makeOptions"
+                                :updateValueHandler="(val) => { car.make_id = val; }"></input-auto-complete>
                         </div>
 
                         <div class="form-group">
                             <label for="model_id">Model <required-label></required-label> </label>
                             <br>
-                            <auto-complete id="model_id" name="model_id" placeholder="Enter Model"
-                                :className="$v.car.model_id.$error ? 'is-invalid' : ''" 
+                            <input-auto-complete 
+                                :className="'form-control '+($v.car.model_id.$error ? 'is-invalid' : '')"
                                 :value="$v.car.model_id.$model"
-                                :updateValueHandler="(val) => { car.model_id = val; }"
-                                :options="modelOptions"></auto-complete>
+                                id="model_id"  name="model_id"
+                                placeholder="Enter Model..."
+                                :options="modelOptions"
+                                :updateValueHandler="(val) => { car.model_id = val; }"></input-auto-complete>
                         </div>
 
                         <div class="form-group">
@@ -80,7 +84,11 @@
 <script>
 import { mapGetters } from 'vuex';
 import { required, integer, numeric } from 'vuelidate/lib/validators';
+import  InputAutoComplete  from  'vue-input-autocomplete';
 export default {
+    components: {
+        InputAutoComplete
+    },
     props: {
         submitFormHandler: {
             type: Function,

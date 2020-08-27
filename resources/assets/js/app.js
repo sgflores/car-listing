@@ -22,11 +22,9 @@ Vue.component('loading', Loading);
 import RequiredLabel from './components/RequiredLabel.vue';
 import VueLoader from './components/VueLoader';
 import ImageUpload from './components/ImageUpload';
-import AutoComplete from './components/AutoComplete';
 Vue.component('required-label', RequiredLabel);
 Vue.component('vue-loader', VueLoader);
 Vue.component('image-upload', ImageUpload);
-Vue.component('auto-complete', AutoComplete);
 
 import helpers from './helpers';
 window.helpers = helpers;

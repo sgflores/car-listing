@@ -9,7 +9,7 @@ class Car extends Model
     protected $table = 'cars';
 
     protected $fillable = [
-        'model_id', 'make_id', 'year', 'price', 'description'
+        'model_id', 'make_id', 'year', 'price', 'description', 'photo'
     ];
     
     public $_queryFilters = [
